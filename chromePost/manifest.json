@@ -1,0 +1,28 @@
+{
+	"name": "webPageListMaker",
+	"version": "0.0.1",
+	"manifest_version": 2,
+	"description": "気になったページをリスト化!!!",
+	"background": {
+		"scripts": ["post.js", "jquery-2.1.4.min.js"],
+		"persistent": false
+	},
+	"permissions": [
+		"tabs",
+		"clipboardWrite"
+	],
+	"commands": {
+		"add": {
+			"suggested_key": {
+				"default": "Alt+C"
+			},
+			"description": "追加命令"
+		},
+		"get": {
+			"suggested_key": {
+				"default": "Alt+G"
+			},
+			"description": "取得命令"
+		}
+	}
+}
