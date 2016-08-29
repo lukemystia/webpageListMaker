@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using webpageListerServerApp.Models;
+using webpageListerServerApp.Entity;
 
 namespace webpageListerServerApp.Bizlogic
 {
@@ -29,7 +30,7 @@ namespace webpageListerServerApp.Bizlogic
 			{
 				case "add":
 					{
-						var logic = new addLogic();
+						var logic = new dbEntity();
 						logic.ins(wpd);
 
 						break;
