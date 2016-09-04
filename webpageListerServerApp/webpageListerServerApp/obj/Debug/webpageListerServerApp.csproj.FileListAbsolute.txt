@@ -36,12 +36,6 @@ C:\Users\Luke\Documents\GitHub\webpageListerServerApp\webpageListerServerApp\bin
 C:\Users\Luke\Documents\GitHub\webpageListerServerApp\webpageListerServerApp\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\Luke\Documents\GitHub\webpageListerServerApp\webpageListerServerApp\bin\Debug\System.Data.SQLite.xml
 C:\Users\Luke\Documents\GitHub\webpageListMaker\webpageListerServerApp\webpageListerServerApp\bin\Debug\webpageListerServerApp.exe.config
-C:\Users\Luke\Documents\GitHub\webpageListMaker\webpageListerServerApp\webpageListerServerApp\obj\Debug\webpageListerServerApp.exe
-C:\Users\Luke\Documents\GitHub\webpageListMaker\webpageListerServerApp\webpageListerServerApp\obj\Debug\webpageListerServerApp.pdb
-C:\Users\Luke\Documents\GitHub\webpageListMaker\webpageListerServerApp\webpageListerServerApp\obj\Debug\webpageListerServerApp.csprojResolveAssemblyReference.cache
-C:\Users\Luke\Documents\GitHub\webpageListMaker\webpageListerServerApp\webpageListerServerApp\obj\Debug\webpageListerServerApp.FormMain.resources
-C:\Users\Luke\Documents\GitHub\webpageListMaker\webpageListerServerApp\webpageListerServerApp\obj\Debug\webpageListerServerApp.Properties.Resources.resources
-C:\Users\Luke\Documents\GitHub\webpageListMaker\webpageListerServerApp\webpageListerServerApp\obj\Debug\webpageListerServerApp.csproj.GenerateResource.Cache
 C:\Users\Luke\Documents\GitHub\webpageListMaker\webpageListerServerApp\webpageListerServerApp\bin\Debug\webpageListerServerApp.exe
 C:\Users\Luke\Documents\GitHub\webpageListMaker\webpageListerServerApp\webpageListerServerApp\bin\Debug\webpageListerServerApp.pdb
 C:\Users\Luke\Documents\GitHub\webpageListMaker\webpageListerServerApp\webpageListerServerApp\bin\Debug\EntityFramework.dll
@@ -54,3 +48,9 @@ C:\Users\Luke\Documents\GitHub\webpageListMaker\webpageListerServerApp\webpageLi
 C:\Users\Luke\Documents\GitHub\webpageListMaker\webpageListerServerApp\webpageListerServerApp\bin\Debug\EntityFramework.xml
 C:\Users\Luke\Documents\GitHub\webpageListMaker\webpageListerServerApp\webpageListerServerApp\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\Luke\Documents\GitHub\webpageListMaker\webpageListerServerApp\webpageListerServerApp\bin\Debug\System.Data.SQLite.xml
+C:\Users\Luke\Documents\GitHub\webpageListMaker\webpageListerServerApp\webpageListerServerApp\obj\Debug\webpageListerServerApp.csprojResolveAssemblyReference.cache
+C:\Users\Luke\Documents\GitHub\webpageListMaker\webpageListerServerApp\webpageListerServerApp\obj\Debug\webpageListerServerApp.FormMain.resources
+C:\Users\Luke\Documents\GitHub\webpageListMaker\webpageListerServerApp\webpageListerServerApp\obj\Debug\webpageListerServerApp.Properties.Resources.resources
+C:\Users\Luke\Documents\GitHub\webpageListMaker\webpageListerServerApp\webpageListerServerApp\obj\Debug\webpageListerServerApp.csproj.GenerateResource.Cache
+C:\Users\Luke\Documents\GitHub\webpageListMaker\webpageListerServerApp\webpageListerServerApp\obj\Debug\webpageListerServerApp.exe
+C:\Users\Luke\Documents\GitHub\webpageListMaker\webpageListerServerApp\webpageListerServerApp\obj\Debug\webpageListerServerApp.pdb

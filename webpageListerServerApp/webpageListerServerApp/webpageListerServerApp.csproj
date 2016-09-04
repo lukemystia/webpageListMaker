@@ -70,7 +70,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Entity\dbEntity.cs" />
+    <Compile Include="Entity\DbEntity.cs" />
     <Compile Include="Bizlogic\ProcessBranch.cs" />
     <Compile Include="Common\SQLiteConnection.cs" />
     <Compile Include="FormMain.cs">
@@ -79,7 +79,7 @@
     <Compile Include="FormMain.Designer.cs">
       <DependentUpon>FormMain.cs</DependentUpon>
     </Compile>
-    <Compile Include="Models\ClientTcpIp.cs" />
+    <Compile Include="Models\Response.cs" />
     <Compile Include="Models\WebPageData.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -4,14 +4,11 @@ chrome.commands.onCommand.addListener(function(command) {
 		case 'add':
 			add();
 			break;
-		case 'get':
-			
+		case 'myCommand2':
+			get();
 			break;
 	}
-
-
 });
-
 
 function add (){
 	
@@ -40,9 +37,42 @@ function add (){
 			url: "http://localhost:8888",
 			data: json
 		}).done(function(msg){
-			if (msg == 'notfound') {
-				return;
-			}
+			
+			// 表示
+			window.alert(msg);
+
+		}).fail(function(data, textStatus, errorThrown){
+			alert(textStatus); //エラー情報を表示
+			alert(errorThrown.message); //例外情報を表示
+			//alert('error!!!');
 		});
+	});
+}
+
+function get (){
+
+	var obj = {
+		cmd : 'get'
+	};
+	
+	var json = 'json=' + JSON.stringify(obj);
+
+	// 表示
+	window.alert(json);
+
+	// サーバーに情報を問い合わせ
+	$.ajax({
+		type: "POST",
+		url: "http://localhost:8888",
+		data: json
+	}).done(function(msg){
+		
+		// 表示
+		window.alert(msg);
+		
+	}).fail(function(data, textStatus, errorThrown){
+		alert(textStatus); //エラー情報を表示
+		alert(errorThrown.message); //例外情報を表示
+		//alert('error!!!');
 	});
 }

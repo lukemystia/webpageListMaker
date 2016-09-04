@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using webpageListerServerApp.Models;
 using webpageListerServerApp.Entity;
+using LukeLibrary;
 
 namespace webpageListerServerApp.Bizlogic
 {
@@ -23,25 +24,40 @@ namespace webpageListerServerApp.Bizlogic
 		/// <summary>
 		/// コマンドによって処理を分ける
 		/// </summary>
-		public void logic()
+		/// <returns>レスポンス文字列</returns>
+		public string Logic()
 		{
-			
-			switch (wpd.Command)
+			try
 			{
-				case "add":
-					{
-						var logic = new dbEntity();
-						logic.ins(wpd);
+				switch (wpd.Command)
+				{
+					case "add":
+						{
+							var logic = new DbEntity();
+							logic.Ins(wpd);
 
-						break;
-					}
-				case "get":
+							return "0";
+						}
+					case "get":
+						{
+							var logic = new DbEntity();
+							// 取得
+							var getData = logic.Get(wpd);
+							// 移動
+							logic.Tohistory();
+							// 消去
+							logic.Del();
 
-					break;
+							return getData.SaveInJson<List<WebPageData>>();
+						}
+				}
 
-				case "del":
-
-					break;
+				throw new Exception();
+			}
+			catch (Exception ex)
+			{
+				Console.WriteLine(ex.Message);
+				return "error";
 			}
 		}
 	}

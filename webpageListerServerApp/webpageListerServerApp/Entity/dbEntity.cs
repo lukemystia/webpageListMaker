@@ -14,12 +14,12 @@ namespace webpageListerServerApp.Entity
 	/// <summary>
 	/// DB操作関連
 	/// </summary>
-	public class dbEntity
+	public class DbEntity
 	{
 		/// <summary>
 		/// DBインサート
 		/// </summary>
-		public void ins(WebPageData wpd)
+		public void Ins(WebPageData wpd)
 		{
 			try
 			{
@@ -32,9 +32,9 @@ namespace webpageListerServerApp.Entity
 
 					cmd.CommandText = "REPLACE INTO pages (title, url, date) VALUES (@TITLE, @URL, @DATE)";
 
-					cmd.Parameters.Add(setParam("@TITLE", DbType.String, wpd.Title));
-					cmd.Parameters.Add(setParam("@URL", DbType.String, wpd.URL));
-					cmd.Parameters.Add(setParam("@DATE", DbType.String, wpd.nowtime.ToString()));
+					cmd.Parameters.Add(SetParam("@TITLE", DbType.String, wpd.Title));
+					cmd.Parameters.Add(SetParam("@URL", DbType.String, wpd.URL));
+					cmd.Parameters.Add(SetParam("@DATE", DbType.String, wpd.nowtime.ToString()));
 
 					cmd.ExecuteNonQuery();
 
@@ -47,11 +47,53 @@ namespace webpageListerServerApp.Entity
 			}
 		}
 
+		/// <summary>
+		/// データ取得
+		/// </summary>
+		/// <param name="wpd"></param>
+		/// <returns></returns>
+		public List<WebPageData> Get(WebPageData wpd)
+		{
+			try
+			{
+				// 取得データ
+				var retData = new List<WebPageData>();
+
+				var dbConnection = new SQLiteConnect();
+
+				using (dbConnection.conn)
+				using (var transaction = dbConnection.conn.BeginTransaction())
+				{
+					var cmd = dbConnection.conn.CreateCommand();
+
+					cmd.CommandText = "SELECT * FROM pages ";
+
+					using (var reader = cmd.ExecuteReader())
+					{
+						while (reader.Read())
+						{
+							var temp = new WebPageData();
+
+							temp.Title = reader["title"].ToString();
+							temp.URL = reader["url"].ToString();
+
+							retData.Add(temp);
+						}
+					}
+				}
+
+				return retData;
+			}
+			catch (Exception ex)
+			{
+				throw ex;
+			}
+		}
 
 		/// <summary>
 		/// historyテーブルに移す
 		/// </summary>
-		public void tohistory()
+		public void Tohistory()
 		{
 			try
 			{
@@ -70,7 +112,7 @@ namespace webpageListerServerApp.Entity
 
 					cmd.CommandText = sql.ToString();
 
-					cmd.Parameters.Add(setParam("@NOWTIME", DbType.String, DateTime.Now.ToString()));
+					cmd.Parameters.Add(SetParam("@NOWTIME", DbType.String, DateTime.Now.ToString()));
 
 					cmd.ExecuteNonQuery();
 
@@ -86,7 +128,7 @@ namespace webpageListerServerApp.Entity
 		/// <summary>
 		/// 消去
 		/// </summary>
-		public void del()
+		public void Del()
 		{
 			try
 			{

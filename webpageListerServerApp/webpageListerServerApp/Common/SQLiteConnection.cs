@@ -50,7 +50,7 @@ namespace webpageListerServerApp.Common
 		/// <param name="pDt">タイプ</param>
 		/// <param name="pValue">値</param>
 		/// <returns></returns>
-		public static SQLiteParameter setParam(string pName, DbType pDt, object pValue)
+		public static SQLiteParameter SetParam(string pName, DbType pDt, object pValue)
 		{
 			var param = new SQLiteParameter();
 
